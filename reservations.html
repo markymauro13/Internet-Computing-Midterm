@@ -1,0 +1,146 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlantic Trails Resort</title>
+  </head>
+
+  <body>
+    <style>
+      #navul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      #navlinks {
+        float: left;
+        margin: 5px;
+        text-decoration: underline;
+      }
+
+      #form_label {
+        display: inline-block;
+        width: 100px;
+      }
+    </style>
+
+    <h1>Atlantic Trails Resort</h1>
+
+    <nav>
+      <strong>
+        <ul id="navul">
+          <a href="./homepage.html">
+            <li id="navlinks">Home</li>
+          </a>
+          <a href="./yurts.html">
+            <li id="navlinks">Yurts</li>
+          </a>
+          <a href="./activities.html">
+            <li id="navlinks">Activities</li>
+          </a>
+          <a href="./reservations.html">
+            <li id="navlinks">Reservations</li>
+          </a>
+        </ul>
+      </strong>
+    </nav>
+
+    <h2>Reservations at Atlantic Trails</h2>
+
+    <h3>Contact Us Today!</h3>
+
+    <h2>Reservations Form</h2>
+
+    <form action="./process_form.php" method="post">
+      <p>
+        <label id="form_label">First Name:</label>
+        <input type="text" name="fname" />
+      </p>
+      <p>
+        <label id="form_label">Last Name:</label>
+        <input type="text" name="lname" />
+      </p>
+      <p>
+        <label id="form_label"><strong> Address </strong></label>
+      </p>
+      <p>
+        <label id="form_label">Number & Street:</label>
+        <input type="text" name="num_street" required />
+      </p>
+      <p>
+        <label id="form_label">City:</label>
+        <input type="text" name="city" required />
+      </p>
+      <p>
+        <label id="form_label">State:</label>
+        <input type="text" name="state" required />
+      </p>
+      <p>
+        <label id="form_label">Zip Code:</label>
+        <input type="number" name="zip" required />
+      </p>
+      <p>
+        <label id="form_label">Check-in Date:</label>
+        <input type="date" name="checkin" required />
+      </p>
+      <p>
+        <label id="form_label">Check-out Date:</label>
+        <input type="date" name="checkin" required />
+      </p>
+      <p>
+        <label id="form_label">Number of People:</label>
+        <input type="number" name="checkout" required />
+      </p>
+      <p>
+        <label id="form_label">Room Type:</label>
+        <input type="text" name="room" required />
+      </p>
+      <p>
+        <label id="form_label">Phone:</label>
+        <input type="tel" name="phonenum" />
+        <label>(###) ###-####</label>
+      </p>
+      <p>
+        <label id="form_label">E-mail Address:</label>
+        <input
+          type="email"
+          name="e_mail"
+          pattern="[a-zA-Z0-9]+@montclair.edu"
+          required
+        />
+      </p>
+      <p>
+        <label id="form_label">Payment Method:</label>
+        <input type="text" name="payment" required />
+      </p>
+      <p>
+        <label id="form_label">Card Number:</label>
+        <input type="text" name="cardnum" required />
+      </p>
+      <p>
+        <label><strong>Special Requests:</strong></label>
+        <input
+          type="text"
+          name="special_requests"
+          style="height: 60px; width: 250px"
+          required
+        />
+      </p>
+
+      <p>
+        <input type="submit" />
+        <input type="reset" value="Clear" />
+      </p>
+    </form>
+
+    <footer>
+      <p>
+        <i>Copyright &copy 2022 Atlantic Trails Resort</i> <br />
+        <a href="">Mauro.Mark@mail.montclair.edu</a>
+      </p>
+    </footer>
+  </body>
+</html>
