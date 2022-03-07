@@ -9,23 +9,93 @@
 
 <body>
     <style>
-        @media screen and (max-width: 900px) {
-            img {
-                width: 280px;
-                height: 300px;
-                display: block;
-            }
+        table,
+        th,
+        td {
+            border: 1px solid black;
         }
+
+        #navul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #navlinks {
+            float: left;
+            margin: 5px;
+            text-decoration: underline;
+        }
+
+        img {
+            width: 400px;
+            height: 300px;
+        }
+
+        img:hover {
+            width: 600px;
+            width: 500px;
+        }
+
+        /* make responsive images */
+        /* @media screen and (max-width:900px) {
+            table {
+                width: 95%;
+            }
+        } */
     </style>
 
-    <div id="image-wrapper">
-        <img src="./img/asbury1.png" alt="view" width="500" height="300">
-        <img src="./img/asbury2.png" alt="view" width="500" height="300">
-        <img src="./img/asbury3.png" alt="view" width="500" height="300">
-        <img src="./img/asbury4.png" alt="view" width="500" height="300">
-        <img src="./img/asbury5.png" alt="view" width="500" height="300">
-        <img src="./img/asbury6.png" alt="view" width="500" height="300">
-    </div>
+    <h1>Atlantic Trails Resort</h1>
+
+    <nav>
+        <strong>
+            <ul id="navul">
+                <a href="./homepage.html">
+                    <li id="navlinks">Home</li>
+                </a>
+                <a href="./yurts.html">
+                    <li id="navlinks">Yurts</li>
+                </a>
+                <a href="./activities.html">
+                    <li id="navlinks">Activities</li>
+                </a>
+                <a href="./reservations.html">
+                    <li id="navlinks">Reservations</li>
+                </a>
+            </ul>
+        </strong>
+    </nav>
+
+    <h2>Activities at Atlantic Trails</h2>
+
+    <table>
+
+        <tr>
+            <td>Waterpark - $10</td>
+            <td>Beach - Free</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./img/asbury2.png" alt="">
+            </td>
+            <td>
+                <img src="./img/asbury3.png" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td>Shopping - $50</td>
+            <td>Food - $25</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./img/asbury6.png" alt="">
+            </td>
+            <td>
+                <img src="./img/asbury5.png" alt="">
+            </td>
+        </tr>
+    </table>
 
 </body>
 

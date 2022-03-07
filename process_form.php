@@ -145,16 +145,16 @@ echo "<p>The followings are the information that you entered:</p>";
                 $total_cost = 0;
 
                 if($room == "King"){
-                    $total_cost = ($queen * 3) * 1.07;
-                    echo "$".$total_cost;
+                    $total_cost = ($king * 3) * 1.07;
+                    echo "$".number_format($total_cost,2);
                 }
                 elseif($room == "Queen"){
                     $total_cost = ($queen * 3) * 1.07;
-                    echo "$".$total_cost;
+                    echo "$".number_format($total_cost,2);
                 }
                 elseif($room == "Suit"){
                     $total_cost = ($suit * 3) * 1.07;
-                    echo "$".$total_cost;
+                    echo "$".number_format($total_cost,2);
                 }
                 else {
                     echo "improper room input";
