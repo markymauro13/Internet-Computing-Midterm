@@ -16,6 +16,18 @@ $payment = $_POST['payment'];
 $cardnum = $_POST['cardnum'];
 $special_requests = $_POST['special_requests'];
 
+// calculating number of days between checkout and checkin
+$new_checkin = (string) $checkin;
+$new_checkout = (string) $checkout;
+$datetime1 = new DateTime($new_checkin);
+$datetime2 = new DateTime($new_checkout);
+$interval = $datetime1->diff($datetime2);
+// echo $interval->format('%a');
+$num_of_days = $interval;
+
+// saving the number from date subtraction
+$number_num_of_days = $interval->format('%a');
+
 echo "<h1>Thank you ".$fname." ".$lname." for your reservation</h1>";
 echo "<p>The followings are the information that you entered:</p>";
 
@@ -103,6 +115,14 @@ echo "<p>The followings are the information that you entered:</p>";
             </label>
     </p>
     <p>
+        <label id="form_label"> Number of Days </label> 
+            <label> 
+            <?php
+                echo $num_of_days->format('%a');
+            ?>
+            </label>
+    </p>
+    <p>
         <label id="form_label"> Email </label> 
             <label> 
             <?php
@@ -140,24 +160,24 @@ echo "<p>The followings are the information that you entered:</p>";
             <?php
                 $king = 200;
                 $queen = 150;
-                $suit = 300;
+                $suite = 300;
 
                 $total_cost = 0;
 
                 if($room == "King"){
-                    $total_cost = ($king * 3) * 1.07;
+                    $total_cost = ($king * $number_num_of_days) * 1.07;
                     echo "$".number_format($total_cost,2);
                 }
                 elseif($room == "Queen"){
-                    $total_cost = ($queen * 3) * 1.07;
+                    $total_cost = ($queen * $number_num_of_days) * 1.07;
                     echo "$".number_format($total_cost,2);
                 }
-                elseif($room == "Suit"){
-                    $total_cost = ($suit * 3) * 1.07;
+                elseif($room == "Suite"){
+                    $total_cost = ($suite * $number_num_of_days) * 1.07;
                     echo "$".number_format($total_cost,2);
                 }
                 else {
-                    echo "improper room input";
+                    echo "improper room input!";
                 }
 
             ?>

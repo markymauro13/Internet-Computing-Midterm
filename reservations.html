@@ -24,7 +24,11 @@
 
     #form_label {
       display: inline-block;
-      width: 100px;
+      width: 120px;
+    }
+
+    select {
+      width: 173px;
     }
   </style>
 
@@ -81,7 +85,7 @@
     </p>
     <p>
       <label id="form_label">Zip Code:</label>
-      <input type="number" name="zip" required />
+      <input type="text" name="zip" required />
     </p>
     <p>
       <label id="form_label">Check-in Date:</label>
@@ -97,11 +101,15 @@
     </p>
     <p>
       <label id="form_label">Room Type:</label>
-      <input type="text" name="room" required />
+      <select name="room" type="text" required>
+        <option value="King">King</option>
+        <option value="Queen">Queen</option>
+        <option value="Suite">Suite</option>
+      </select>
     </p>
     <p>
       <label id="form_label">Phone:</label>
-      <input type="tel" name="phonenum" />
+      <input type="tel" name="phonenum" pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}" />
       <label>(###) ###-####</label>
     </p>
     <p>
@@ -110,11 +118,16 @@
     </p>
     <p>
       <label id="form_label">Payment Method:</label>
-      <input type="text" name="payment" required />
+      <select name="payment" type="text" required>
+        <option value="MC">MC</option>
+        <option value="VISA">VISA</option>
+        <option value="AMEX">AMEX</option>
+        <option value="Discover">Discover</option>
+      </select>
     </p>
     <p>
       <label id="form_label">Card Number:</label>
-      <input type="text" name="cardnum" required />
+      <input type="text" name="cardnum" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required />
     </p>
     <p>
       <label><strong>Special Requests:</strong></label>
@@ -130,7 +143,8 @@
   <footer>
     <p>
       <i>Copyright &copy 2022 Atlantic Trails Resort</i> <br />
-      <a href="">Mauro.Mark@mail.montclair.edu</a>
+      <a href="">Mauro.Mark@mail.montclair.edu</a> <br />
+      <a href="">Sarmiento.Brianna@mail.montclair.edu</a>
     </p>
   </footer>
 </body>

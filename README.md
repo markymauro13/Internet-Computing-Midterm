@@ -2,6 +2,8 @@
 Midterm for Internet Computing
 
 TODO:
-- [ ] fix phone number on form (add proper regex)
-- [ ] make sure all versions from pacific -> atlantic occured
-- [ ] change image hovering on question 4?
+- [ x ] fix phone number on form (add proper regex)
+- [ x ] make sure all versions from pacific -> atlantic occured
+- [ x ] change image hovering on question 4?
+- [ x ] add briannas name.
+- [ x ] activity page responsiveness
